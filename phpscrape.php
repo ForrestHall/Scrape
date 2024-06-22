@@ -1,6 +1,6 @@
 <?php
 # scraping books to scrape: https://books.toscrape.com/
-require 'vendor/autoload.php';
+require '/autoload.php';
 $httpClient = new \GuzzleHttp\Client();
 $response = $httpClient->get('https://books.toscrape.com/');
 $htmlString = (string) $response->getBody();
