@@ -1,5 +1,5 @@
 const puppeteer = require('puppeteer')
-const fs = require('fs/promise')
+const fs = require('fs/promises')
 
 async function start() {
 	const browser = await puppeteer.launch()
