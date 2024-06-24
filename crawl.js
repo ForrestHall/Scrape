@@ -7,7 +7,7 @@ async function start() {
 	await page.goto("https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=4043629")
 	await page.screenshot({path: "safer.png", fullPage: true})	
 	const names = await page.evaluate(() => {
-		return Array.from(document.querySelector(".queryfield")).map(x => x.textContent)
+		return Array.from(document.querySelector(".queryfield td")).map(x => x.textContent)
 	})
 	await fs.writeFile("names.txt", names.join("\r\n"))
 	await browser.close()
