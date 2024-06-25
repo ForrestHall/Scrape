@@ -11,6 +11,7 @@ async function start() {
 	const value = await page.evaluate(() => {
 		return Array.from(document.querySelectorAll(".queryfield")).map(x => x.textContent)
 	})
+	console.log(names)
 	await fs.writeFile("names.txt", names.join("\r\n"))
 	await browser.close()
 }
