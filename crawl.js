@@ -7,6 +7,8 @@ async function start() {
 	await page.goto("https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=4043629")
 	const names = await page.evaluate(() => {
 		return Array.from(document.querySelectorAll(".querylabel")).map(x => x.textContent)
+		array.filter( function(value) {
+  		return value !== 'B'})
 	})
 	const value = await page.evaluate(() => {
 		return Array.from(document.querySelectorAll(".queryfield")).map(x => x.textContent)
