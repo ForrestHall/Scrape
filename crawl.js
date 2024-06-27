@@ -13,9 +13,13 @@ async function start() {
 			})
 	const removeValue = ['AUTHORIZED FOR Property  For Licensing and Insurance details  click here.']
 	const cleanValue = value.filter(ele => !removeValue.includes(ele));
-	console.log(names)
-	console.log(value)
-	console.log(cleanValue)
+
+	names.forEach((name, idx) => result[names] = cleanValue[idx]);
+	//console.log(names)
+	//console.log(value)
+	//console.log(cleanValue)
+	console.log(result);
+
 
 	await fs.writeFile("names.txt", names.join("\r\n"))
 	await browser.close()
