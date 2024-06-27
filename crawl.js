@@ -22,7 +22,7 @@ async function start() {
  	//console.log(names)
 	//console.log(value)
 	//console.log(cleanValue)
-	console.log(result)
+	//console.log(result)
 	const info = await page.$eval('table tbody', tbody => [...tbody.rows].map(r => [...r.cells].map(c => c.innerText)))
 	console.log(info)
 
