@@ -27,14 +27,14 @@ async function start() {
 	console.log(info)
 
 	const result = await page.evaluate(() => {
-  		const rows = document.querySelectorAll('.querylabel tr');
+  		const rows = document.querySelectorAll('querylabelbkg tr');
  		return Array.from(rows, row => {
     			const columns = row.querySelectorAll('.queryfield td');
     			return Array.from(columns, column => column.innerText);
  		 });
 	});
 
-console.log(result[1][2]);
+console.log(result[1]);
 
 	//await fs.writeFile("names.txt", names.join("\r\n"))
 	await browser.close()
