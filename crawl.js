@@ -15,7 +15,7 @@ async function start() {
 	const cleanValue = value.filter(ele => !removeValue.includes(ele));
 	const result = {};
 
-	names.forEach((name, idx) => result[names] = cleanValue[idx]);
+	names.forEach((name, idx) => result[name] = cleanValue[idx]);
 	//console.log(names)
 	//console.log(value)
 	//console.log(cleanValue)
