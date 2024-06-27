@@ -27,9 +27,9 @@ async function start() {
 	console.log(info)
 
 	const result = await page.evaluate(() => {
-  		const rows = document.querySelectorAll('tr');
+  		const rows = document.querySelectorAll('.querylabel tr');
  		return Array.from(rows, row => {
-    			const columns = row.querySelectorAll('td');
+    			const columns = row.querySelectorAll('.queryfield td');
     			return Array.from(columns, column => column.innerText);
  		 });
 	});
