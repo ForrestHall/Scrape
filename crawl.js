@@ -13,6 +13,7 @@ async function start() {
 			})
 	const removeValue = ['AUTHORIZED FOR Property  For Licensing and Insurance details  click here.']
 	const cleanValue = value.filter(ele => !removeValue.includes(ele));
+	const result = {};
 
 	names.forEach((name, idx) => result[names] = cleanValue[idx]);
 	//console.log(names)
