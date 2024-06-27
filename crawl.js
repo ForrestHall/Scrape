@@ -12,7 +12,7 @@ async function start() {
 			return Array.from(document.querySelectorAll(".queryfield")).map(x => x.textContent)
 			})
 	const removeValue = ['AUTHORIZED FOR Property  For Licensing and Insurance details  click here.']
-	const cleanValue = value.filter(ele => !removeValues.includes(ele));
+	const cleanValue = value.filter(ele => !removeValue.includes(ele));
 	console.log(names)
 	console.log(value)
 	console.log(cleanValue)
