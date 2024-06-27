@@ -23,8 +23,8 @@ async function start() {
 	//console.log(value)
 	//console.log(cleanValue)
 	//console.log(result)
-	const info = await page.$eval('table tbody', tbody => [...tbody.rows].map(r => [...r.cells].map(c => c.innerText)))
-	console.log(info)
+	//const info = await page.$eval('table tbody', tbody => [...tbody.rows].map(r => [...r.cells].map(c => c.innerText)))
+	//console.log(info)
 
 	const result = await page.evaluate(() => {
   		const rows = document.querySelectorAll('querylabelbkg tr');
@@ -33,6 +33,17 @@ async function start() {
     			return Array.from(columns, column => column.innerText);
  		 });
 	});
+
+    const data = await page.evaluate(() => {
+    const tds = Array.from(document.querySelectorAll('table tr td'))
+    return tds.map(td => td.innerText)
+  });
+
+  //You will now have an array of strings
+  //[ 'One', 'Two', 'Three', 'Four' ]
+  console.log(data);
+  //One
+  console.log(data[0]);
 
 console.log(result[1]);
 
