@@ -26,8 +26,17 @@ async function start() {
 	const info = await page.$eval('table tbody', tbody => [...tbody.rows].map(r => [...r.cells].map(c => c.innerText)))
 	console.log(info)
 
+	const result = await page.evaluate(() => {
+  		const rows = document.querySelectorAll('tr');
+ 		return Array.from(rows, row => {
+    			const columns = row.querySelectorAll('td');
+    			return Array.from(columns, column => column.innerText);
+ 		 });
+	});
 
-	await fs.writeFile("names.txt", names.join("\r\n"))
+console.log(result[1][2]);
+
+	//await fs.writeFile("names.txt", names.join("\r\n"))
 	await browser.close()
 }
 
