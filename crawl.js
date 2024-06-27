@@ -12,17 +12,17 @@ async function start() {
 			return Array.from(document.querySelectorAll("table td")).map(x => x.textContent)
 			})
 
-	/*const removeValue = ['State Carrier ID Number:,']
-	const cleanValue = value.filter(ele => !removeValue.includes(ele));
+	//const removeValue = ['State Carrier ID Number:,']
+	//const cleanValue = value.filter(ele => !removeValue.includes(ele));
 	const result = {};
 
 
  	names.forEach((name, idx) => result[name] = value[idx]);
-*/
- 	console.log(names)
-	console.log(value)
+
+ 	//console.log(names)
+	//console.log(value)
 	//console.log(cleanValue)
-	//console.log(result)
+	console.log(result)
 	//const info = await page.$eval('table tbody', tbody => [...tbody.rows].map(r => [...r.cells].map(c => c.innerText)))
 	//console.log(info)
 
