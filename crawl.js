@@ -8,7 +8,7 @@ async function start() {
 	const names = await page.evaluate(() => {
 		return Array.from(document.querySelectorAll(".querylabel")).map(x => x.textContent)
 		array.filter( function(value) {
-  		return value !== 'B'})
+  		return value !== 'AUTHORIZED FOR Property  For Licensing and Insurance details  click here.'})
 	})
 	const value = await page.evaluate(() => {
 		return Array.from(document.querySelectorAll(".queryfield")).map(x => x.textContent)
