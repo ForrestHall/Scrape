@@ -27,6 +27,7 @@ async function run() {
           dataObject[keyCell.innerText] = valueCell.innerText;
          }*/
     return dataObject;
+    console.log(dataObject)
     });
 
     
