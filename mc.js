@@ -16,18 +16,19 @@ async function run() {
     //const tds = Array.from(document.querySelectorAll('td'))
     //return tds.map(td => td.innerText)
     //console.log(tds)
+    
     const pattern = new RegExp('/MC-/gm');
 
     const data = await page.evaluate(() => {
     const tds = document.body.innerText//Array.from(document.querySelectorAll('table tbody tr td'))
-    return tds;
-    console.log(tds.match(pattern));
+    const numb =tds.match(pattern);
+
+    return numb;
 
     });
 
 //console.log(data);
  
-
 
   
 
