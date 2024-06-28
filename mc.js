@@ -16,15 +16,17 @@ async function run() {
     const pattern = new RegExp('/MC-/gm');
 
     const data = await page.evaluate(() => {
-    const tds = document.body.innerText//Array.from(document.querySelectorAll('table tbody tr td'))
-    return tds//.map(td => td.innerText)
+      const tds = document.body.innerText//Array.from(document.querySelectorAll('table tbody tr td'))
+      return tds//.map(td => td.innerText)
     });
       
-      var filtered = data.search(function (item) {
+    /*var filtered = data.search(function (item) {
         return item.match(/MC/);
-  });
-//console.log(data.search('MC'));
-  console.log(filtered)
+    });
+    */
+    const result = (string.match(/(?<=MC-).*?/g) || []);
+    console.log(result);
+    //console.log(filtered)
 
   
 
