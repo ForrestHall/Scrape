@@ -25,7 +25,7 @@ async function run() {
     });
 
      console.log(data)
-     console.log(data[data.search(regex)])); 
+     console.log(data[data.search(regex)]); 
 
 
   
