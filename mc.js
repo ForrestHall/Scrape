@@ -14,8 +14,8 @@ async function run() {
     // below will select test.html that is in the same directory as the script
     await page.goto(`file:${path.join(__dirname, 'data.html')}`);
     const numbers = await page.evaluate(() => {
-    const tds = Array.from(document.querySelectorAll('table'))
-    return tds.map(td => th.innerText)
+    const tds = Array.from(document.querySelectorAll('table th'))
+    return tds.map(td => td.innerText)
     console.log(tds)
 
     });
