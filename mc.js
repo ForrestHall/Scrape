@@ -20,7 +20,7 @@ async function run() {
     return tds//.map(td => td.innerText)
     });
       
-      var filtered = data.filter(function (item) {
+      var filtered = data.search(function (item) {
         return item.match(/MC/);
   });
 console.log(data.search('MC'));
