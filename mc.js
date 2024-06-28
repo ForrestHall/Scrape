@@ -22,7 +22,9 @@ async function run() {
     return tds.map(td => td.innerText)
     });
 
-    
+    console.log(data)
+  
+    console.log(tds)
 
 
     browser.close();
