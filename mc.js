@@ -20,7 +20,7 @@ async function run() {
     return tds//.map(td => td.innerText)
     });
 
-console.log(data.search(MC));
+console.log(data.search('MC'));
 
 
   
