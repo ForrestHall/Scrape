@@ -20,11 +20,13 @@ async function run() {
 
     const data = await page.evaluate(() => {
     const tds = document.body.innerText//Array.from(document.querySelectorAll('table tbody tr td'))
-    return tds//.map(td => td.innerText)
+    return tds;
+    console.log(tds.match(pattern));
+
     });
 
 //console.log(data);
-console.log(tds.match(pattern)); 
+ 
 
 
   
