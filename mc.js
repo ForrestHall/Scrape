@@ -24,7 +24,7 @@ async function run() {
 
     console.log(data)
    var pattern = new RegExp('/MC-/gm');
-   console.log(tds.map.search(regex));
+   console.log(document.search(regex));
 
 
 
