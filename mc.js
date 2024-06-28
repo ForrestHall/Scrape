@@ -20,7 +20,7 @@ async function run() {
     return tds//.map(td => td.innerText)
     });
 
-console.log(data.match('vehicle'));
+console.log(data.match('class'));
 
 
   
