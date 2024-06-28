@@ -23,7 +23,8 @@ async function run() {
     });
 
     console.log(data)
-  
+var pattern = new RegExp('/MC-/gm');
+console.log(pattern)
 function useRegex(input) {
     let regex = /.*/i;
     return regex.test(input);
