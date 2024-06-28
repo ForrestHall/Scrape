@@ -15,11 +15,11 @@ async function run() {
     
     const data = await page.evaluate(() => {
       const tds = document.body.innerText
-      return tds//
+      return tds
     });
   
-    const result = (data.match(/(?<=MC-).*?(?=<)/g) || []);
-    const result = (data.match(/(?<=MC-).*?(?=<)/g) || []);
+    const dot = (data.match(/(?<=MC-).*?(?=<)/g) || []);
+    const mc = (data.match(/(?<=MC-).*?(?=<)/g) || []);
     //console.log(result);
     console.log(data);
 
