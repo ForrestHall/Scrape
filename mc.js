@@ -24,7 +24,6 @@ async function run() {
 
     console.log(data)
   
-    console.log(tds)
 
 
     browser.close();
