@@ -25,8 +25,8 @@ async function run() {
           if (!row.querySelector('th')) continue; // Skip headers.
           const [keyCell, valueCell] = row.cells;
           dataObject[keyCell.innerText] = valueCell.innerText;
-         }
-    return dataObject;*/
+         }*/
+    return dataObject;
     });
 
     
