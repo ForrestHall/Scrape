@@ -17,7 +17,7 @@ async function run() {
     const tds = Array.from(document.querySelectorAll('table tr td'))
     return tds.map(td => td.innerText)
     });
-    console.log(await page.content());
+    console.log(tds);
     browser.close();
 }
  
