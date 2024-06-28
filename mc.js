@@ -21,7 +21,8 @@ async function run() {
       const dataObject = {};
       const tbody = document.getElementsByTagName('table');
       return tbody;
-      
+          console.log(tbody); 
+
         /*for (const row of table.rows) {
           if (!row.querySelector('th')) continue; // Skip headers.
           const [keyCell, valueCell] = row.cells;
@@ -31,7 +32,6 @@ async function run() {
     });
 
     
-    console.log(tbody); 
 
     
     browser.close();
