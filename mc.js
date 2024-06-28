@@ -21,7 +21,7 @@ async function run() {
 
     const data = await page.evaluate(() => {
     const tds = document.body.innerText//Array.from(document.querySelectorAll('table tbody tr td'))
-    const numb = tds.match(pattern);
+    const numb = tds.search(pattern);
 
     return numb;
 
