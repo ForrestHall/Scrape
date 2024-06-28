@@ -18,16 +18,8 @@ async function run() {
     //return tds.map(td => td.innerText)
     //console.log(tds)
     const data = await page.evaluate(() => {
-      const dataObject = {};
-      const tbody = document.querySelector('table');
-
-        for (const row of table.rows) {
-          if (!row.querySelector('th')) continue; // Skip headers.
-          const [keyCell, valueCell] = row.cells;
-          dataObject[keyCell.innerText] = valueCell.innerText;
-         }
-    return dataObject;
-    console.log(dataObject)
+    const tds = Array.from(document.querySelectorAll('table tr td'))
+    return tds.map(td => td.innerText)
     });
 
     
