@@ -24,7 +24,7 @@ async function run() {
     });
 
 console.log(data);
-console.log(data[data.search(pattern)]); 
+console.log(data[data.match(pattern)]); 
 
 
   
