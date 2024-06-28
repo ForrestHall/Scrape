@@ -13,20 +13,15 @@ async function run() {
     //  use relative paths: 
     await page.goto(`file:${path.join(__dirname, 'data.html')}`);
     
-    const pattern = new RegExp('/MC-/gm');
-
     const data = await page.evaluate(() => {
-      const tds = document.body.innerText//Array.from(document.querySelectorAll('table tbody tr td'))
-      return tds//.map(td => td.innerText)
+      const tds = document.body.innerText
+      return tds//
     });
-      
-    /*var filtered = data.search(function (item) {
-        return item.match(/MC/);
-    });
-    */
+  
     const result = (data.match(/(?<=MC-).*?(?=<)/g) || []);
-    console.log(result);
-    //console.log(data);
+    const result = (data.match(/(?<=MC-).*?(?=<)/g) || []);
+    //console.log(result);
+    console.log(data);
 
     //console.log(filtered)
 
