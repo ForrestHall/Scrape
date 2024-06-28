@@ -20,7 +20,8 @@ async function run() {
     const data = await page.evaluate(() => {
       const dataObject = {};
       const tbody = document.getElementsByTagName('table');
-      return tbody;
+      //return tbody;
+              console.log(tbody); 
 
         /*for (const row of table.rows) {
           if (!row.querySelector('th')) continue; // Skip headers.
@@ -35,6 +36,5 @@ async function run() {
 
     browser.close();
 }
-              console.log(tbody); 
 
 run();
