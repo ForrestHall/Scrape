@@ -20,8 +20,7 @@ async function run() {
     return tds//.map(td => td.innerText)
     });
 
-console.log(data);
-//console.log(data[data.match(pattern)]); 
+console.log(data.match(pattern));
 
 
   
