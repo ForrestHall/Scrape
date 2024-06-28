@@ -11,28 +11,27 @@ async function run() {
     
 
     //  use relative paths: 
-    // below will select test.html that is in the same directory as the script
     await page.goto(`file:${path.join(__dirname, 'data.html')}`);
     //const numbers = await page.evaluate(() => {
     //const tds = Array.from(document.querySelectorAll('td'))
     //return tds.map(td => td.innerText)
     //console.log(tds)
+    const pattern = new RegExp('/MC-/gm');
+
     const data = await page.evaluate(() => {
     const tds = Array.from(document.querySelectorAll('table tbody tr td'))
     return tds.map(td => td.innerText)
-    const pattern = new RegExp('/MC-/gm');
-    
     });
 
-     console.log(data)
-     console.log(data[data.search(pattern)]); 
+console.log(data);
+console.log(data[data.search(pattern)]); 
 
 
   
 
 
 
-    browser.close();
+browser.close();
 }
 
 run();
