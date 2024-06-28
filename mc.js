@@ -15,7 +15,7 @@ async function run() {
     await page.goto(`file:${path.join(__dirname, 'data.html')}`);
     const numbers = await page.evaluate(() => {
     const tds = Array.from(document.querySelectorAll('table'))
-    return tds.map(td => td.innerText)
+    return tds.map(td => th.innerText)
     console.log(tds)
 
     });
