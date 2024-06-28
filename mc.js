@@ -20,8 +20,8 @@ async function run() {
     const data = await page.evaluate(() => {
       const dataObject = {};
       const tbody = document.querySelector('table:nth-child(2)');
-        for (const row of tbody.rows) {
-          if (!row.querySelector('td')) continue; // Skip headers.
+        for (const row of table.rows) {
+          if (!row.querySelector('th')) continue; // Skip headers.
           const [keyCell, valueCell] = row.cells;
           dataObject[keyCell.innerText] = valueCell.innerText;
          }
