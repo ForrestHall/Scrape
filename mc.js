@@ -32,9 +32,9 @@ async function run() {
 
     
 
-              console.log(tbody); 
 
     browser.close();
 }
+              console.log(tbody); 
 
 run();
