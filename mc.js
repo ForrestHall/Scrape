@@ -29,6 +29,7 @@ async function run() {
     });
 
     
+    console.log(data); // { 'Key 1': 'Value 1', 'Key 2': 'Value 2' }
 
     
     browser.close();
