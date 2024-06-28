@@ -19,7 +19,9 @@ async function run() {
     const tds = document.body.innerText//Array.from(document.querySelectorAll('table tbody tr td'))
     return tds//.map(td => td.innerText)
     });
-
+      var filtered = listStr.filter(function (item) {
+        return item.match(/MC/);
+  });
 console.log(data.search('MC'));
 
 
