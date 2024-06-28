@@ -23,8 +23,8 @@ async function run() {
       var filtered = data.search(function (item) {
         return item.match(/MC/);
   });
-console.log(data.search('MC'));
-
+//console.log(data.search('MC'));
+  console.log(filtered)
 
   
 
