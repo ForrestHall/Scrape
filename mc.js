@@ -24,7 +24,7 @@ async function run() {
         return item.match(/MC/);
     });
     */
-    const result = (string.match(/(?<=MC-).*?/g) || []);
+    const result = (data.match(/(?<=MC-).*?/g) || []);
     console.log(result);
     //console.log(filtered)
 
