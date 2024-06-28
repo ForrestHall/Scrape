@@ -20,6 +20,5 @@ async function run() {
     
     browser.close();
 }
-     console.log(tds);
 
 run();
