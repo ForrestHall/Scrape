@@ -18,7 +18,7 @@ async function run() {
     //return tds.map(td => td.innerText)
     //console.log(tds)
     const data = await page.evaluate(() => {
-    const tds = Array.from(document.querySelector('table:nth-of-type(1) td'))
+    const tds = Array.from(document.querySelector('table:nth-of-type(0) td'))
     return tds.map(td => td.innerText)
     });
 
