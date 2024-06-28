@@ -28,7 +28,7 @@ async function run() {
 
 
 
-}
+
 
     browser.close();
 }
