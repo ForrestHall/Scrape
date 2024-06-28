@@ -21,11 +21,11 @@ async function run() {
       const dataObject = {};
       const tbody = document.querySelector('th');
 
-        /*for (const row of table.rows) {
+        for (const row of table.rows) {
           if (!row.querySelector('th')) continue; // Skip headers.
           const [keyCell, valueCell] = row.cells;
           dataObject[keyCell.innerText] = valueCell.innerText;
-         }*/
+         }
     return dataObject;
     console.log(dataObject)
     });
