@@ -6,7 +6,7 @@ async function run() {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
 
-    // we can use absolute paths like
+    // use absolute paths like
     //await page.goto("file://home/ec2-user/EXAMPLE/Scrape/data.html");  
     
 
@@ -19,7 +19,7 @@ async function run() {
     //console.log(tds)
     const data = await page.evaluate(() => {
       const dataObject = {};
-      const tbody = document.querySelector('table tbody');
+      const tbody = document.querySelector('table tbody:nth-child(2)');
         for (const row of tbody.rows) {
           if (!row.querySelector('td')) continue; // Skip headers.
           const [keyCell, valueCell] = row.cells;
@@ -29,7 +29,7 @@ async function run() {
     });
 
     
-    console.log(data); // { 'Key 1': 'Value 1', 'Key 2': 'Value 2' }
+    console.log(data); 
 
     
     browser.close();
