@@ -19,8 +19,9 @@ async function run() {
     //console.log(tds)
     const data = await page.evaluate(() => {
       const dataObject = {};
-      const tbody = document.querySelector('table:nth-of-type(2)');
+      const tbody = document.getElementsByTagName('table');
       return tbody;
+      
         /*for (const row of table.rows) {
           if (!row.querySelector('th')) continue; // Skip headers.
           const [keyCell, valueCell] = row.cells;
