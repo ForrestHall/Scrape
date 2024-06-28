@@ -21,7 +21,7 @@ async function run() {
     const dot = (data.match(/(?<=MC-).*?(?=<)/g) || []);//regEx to find DOT
     const mc = (data.match(/(?<=MC-).*?(?=<)/g) || []);//regEc to find MC-
     console.log(mc);
-    console.log(data);
+    //console.log(data);
 
     //console.log(filtered)
 
