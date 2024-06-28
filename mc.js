@@ -19,7 +19,7 @@ async function run() {
     //console.log(tds)
     const data = await page.evaluate(() => {
       const dataObject = {};
-      const tbody = document.querySelector('table tbody');
+      const tbody = document.querySelector('table:nth-child(2)');
         for (const row of tbody.rows) {
           if (!row.querySelector('td')) continue; // Skip headers.
           const [keyCell, valueCell] = row.cells;
