@@ -24,7 +24,10 @@ async function run() {
 
     console.log(data)
   
-
+function useRegex(input) {
+    let regex = /.*/i;
+    return regex.test(input);
+}
 
     browser.close();
 }
