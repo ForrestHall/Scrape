@@ -21,12 +21,11 @@ async function run() {
     const tds = Array.from(document.querySelectorAll('table tbody tr td'))
     return tds.map(td => td.innerText)
   var pattern = new RegExp('/MC-/gm');
+  console.log(document.search(pattern)); 
+
     });
-       console.log(document.search(pattern)); 
 
    // console.log(data)
-   var pattern = new RegExp('/MC-/gm');
-   console.log(document.search(regex));
 
 
 
