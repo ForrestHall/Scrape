@@ -6,16 +6,13 @@ async function run() {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
 
-    // use absolute paths like
+    // use absolute paths
     //await page.goto("file://home/ec2-user/EXAMPLE/Scrape/data.html");  
     
 
     //  use relative paths: 
     await page.goto(`file:${path.join(__dirname, 'data.html')}`);
-    //const numbers = await page.evaluate(() => {
-    //const tds = Array.from(document.querySelectorAll('td'))
-    //return tds.map(td => td.innerText)
-    //console.log(tds)
+    
     const pattern = new RegExp('/MC-/gm');
 
     const data = await page.evaluate(() => {
@@ -24,7 +21,7 @@ async function run() {
     });
 
 console.log(data);
-console.log(data[data.match(pattern)]); 
+//console.log(data[data.match(pattern)]); 
 
 
   
