@@ -18,7 +18,7 @@ async function run() {
     //return tds.map(td => td.innerText)
     //console.log(tds)
     const data = await page.evaluate(() => {
-    const tds = Array.from(document.querySelectorAll('.line-content'))
+    const tds = Array.from(document.querySelectorAll('.line-content tr td'))
     return tds.map(td => td.innerText)
     });
 
