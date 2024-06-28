@@ -16,10 +16,10 @@ async function run() {
     const numbers = await page.evaluate(() => {
     const tds = Array.from(document.querySelectorAll('table tr td'))
     return tds.map(td => td.innerText)
-    console.log(tds);
     });
     
     browser.close();
 }
- 
+     console.log(tds);
+
 run();
