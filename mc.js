@@ -20,7 +20,7 @@ async function run() {
     const data = await page.evaluate(() => {
       const dataObject = {};
       const tbody = document.getElementsByTagName('th');
-      return tbody;
+      return data;
 
         /*for (const row of table.rows) {
           if (!row.querySelector('th')) continue; // Skip headers.
