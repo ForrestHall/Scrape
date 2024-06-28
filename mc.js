@@ -20,12 +20,13 @@ async function run() {
     const data = await page.evaluate(() => {
       const dataObject = {};
       const tbody = document.querySelector('table:nth-child(1)');
-        for (const row of table.rows) {
+      return tbody;
+        /*for (const row of table.rows) {
           if (!row.querySelector('th')) continue; // Skip headers.
           const [keyCell, valueCell] = row.cells;
           dataObject[keyCell.innerText] = valueCell.innerText;
          }
-    return dataObject;
+    return dataObject;*/
     });
 
     
