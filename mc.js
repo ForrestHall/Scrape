@@ -26,7 +26,7 @@ async function run() {
     */
     const result = (data.match(/(?<=MC-).*?(?=<)/g) || []);
     console.log(result);
-    console.log(data);
+    //console.log(data);
 
     //console.log(filtered)
 
