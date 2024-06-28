@@ -20,7 +20,7 @@ async function run() {
 
     const data = await page.evaluate(() => {
     const tds = Array.from(document.querySelectorAll('table tbody tr td'))
-    return tds.map(td => td.innerText)
+    return tds//.map(td => td.innerText)
     });
 
 console.log(data);
