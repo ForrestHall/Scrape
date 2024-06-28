@@ -31,7 +31,6 @@ async function run() {
     
 
     
-    console.log(tbody)
     browser.close();
 }
 
